@@ -13,8 +13,16 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        return $this->render('default/index.html.twig', array());
+    }
+
+    /**
+     * @Route("/symfony", name="symfony_homepage")
+     */
+    public function symfonyAction(Request $request)
+    {
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', array(
+        return $this->render('default/symfony.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
         ));
     }
