@@ -12,12 +12,10 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
 
-    <body>
+    <body class="grey lighten-2">
         {% include 'nav.html.twig' %}
 
         {% block body %}{% endblock %}
-
-        {% include 'footer.html.twig' %}
 
         {% block javascripts %}{% endblock %}
 
