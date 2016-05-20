@@ -11,28 +11,19 @@
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
-        <nav class="white" role="navigation">
-            <div class="nav-wrapper container">
-                <a id="logo-container" href="{{ path('homepage') }}" class="brand-logo">Logo</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a target="_blank" href="http://www.weibo.com/939663636">Weibo</a></li>
-                    <li><a target="_blank" href="https://github.com/supersuck">Github</a></li>
-                    <li><a href="{{ path('procure') }}">嘿喵代购</a></li>
-                </ul>
 
-                <ul id="nav-mobile" class="side-nav">
-                    <li><a href="#">Navbar Link</a></li>
-                </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-            </div>
-        </nav>
+    <body>
+        {% include 'nav.html.twig' %}
 
         {% block body %}{% endblock %}
 
+        {% include 'footer.html.twig' %}
+
         {% block javascripts %}{% endblock %}
+
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="{{ asset('materialize/js/bin/materialize.js') }}"></script>
         <script src="{{ asset('materialize/js/init.js') }}"></script>
+
     </body>
 </html>
